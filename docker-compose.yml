@@ -9,4 +9,4 @@ services:
       - "8080:80"
     volumes:
       - ./public:/var/www/html
-    container_name: php-apache-web
+    container_name: php-apache-dev
