@@ -25,7 +25,7 @@ jobs:
         username: ${{ secrets.SERVER_USER }}
         key: ${{ secrets.SERVER_SSH_KEY }}
         source: "./*"
-        target: "var/www/html/groupe3"
+        target: "/var/www/html/groupe3"
 
     # Pas besoin de restart
     # - name: Restart Apache
