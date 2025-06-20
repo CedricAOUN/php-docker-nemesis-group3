@@ -8,7 +8,9 @@
     "start:docker": "docker-compose up -d",
     "test": "echo \"Error: no test specified\" && exit 1",
     "node-test": "node --test node_test/*.js",
-    "jest-test": "jest"
+    "jest-test": "jest",
+    "node-test:coverage": "node --test --experimental-test-coverage node_test/*.js",
+    "jest-test:coverage": "jest --coverage"
   },
   "author": "",
   "license": "ISC",
