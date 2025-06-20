@@ -1,31 +1,31 @@
-name: Deploy API to GCP
+# name: Deploy API to GCP
 
-on:
-  push:
-    branches:
-      - main
+# on:
+#   push:
+#     branches:
+#       - main
 
-jobs:
-  deploy:
-    runs-on: ubuntu-latest
+# jobs:
+#   deploy:
+#     runs-on: ubuntu-latest
 
-    steps:
-    - name: Checkout code
-      uses: actions/checkout@v3
+#     steps:
+#     - name: Checkout code
+#       uses: actions/checkout@v3
 
-    - name: Set up PHP
-      uses: shivammathur/setup-php@v2
-      with:
-        php-version: '8.1'
+#     - name: Set up PHP
+#       uses: shivammathur/setup-php@v2
+#       with:
+#         php-version: '8.1'
 
-    - name: Copy files to server
-      uses: appleboy/scp-action@v1.0.0
-      with:
-        host: ${{ secrets.SERVER_IP }}
-        username: ${{ secrets.SERVER_USER }}
-        key: ${{ secrets.SERVER_SSH_KEY }}
-        source: "./*"
-        target: "/var/www/html/groupe3"
+#     - name: Copy files to server
+#       uses: appleboy/scp-action@v1.0.0
+#       with:
+#         host: ${{ secrets.SERVER_IP }}
+#         username: ${{ secrets.SERVER_USER }}
+#         key: ${{ secrets.SERVER_SSH_KEY }}
+#         source: "./*"
+#         target: "/var/www/html/groupe3"
 
     # Pas besoin de restart
     # - name: Restart Apache
